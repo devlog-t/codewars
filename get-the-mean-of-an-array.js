@@ -4,7 +4,11 @@ function getAverage(marks){
         total += marks[i];
     }
     var avg = total / marks.length; 
-    return Math.round(avg)
+    return Math.floor(avg)
 }
 
-getAverage([1,2,3,4,5,]);
+function getAverage(marks){
+    return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+  }
+
+console.log(getAverage([1,2,3,4,5,]));

@@ -28,7 +28,7 @@ console.log(fizzBuzzCustom())
 console.log(fizzBuzzCustom("Hey"))
 console.log(fizzBuzzCustom("Hey", "Plop"))
 console.log(fizzBuzzCustom("Hey", "Plop", 5))
-console.log(fizzBuzzCustom("Hey", "Plop", 42, 135))
+console.log(fizzBuzzCustom("What's", " up?", 42, 135))
 
 //fizzbuzz 1 - 100 (/5 or /3 or /3 and /5)
 // 1st et 2nd argument = fizz and buzz by default

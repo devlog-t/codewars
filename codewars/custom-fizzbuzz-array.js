@@ -27,7 +27,7 @@ var fizzBuzzCustom = function(stringOne, stringTwo, numOne, numTwo) {
 // console.log(fizzBuzzCustom())
 // console.log(fizzBuzzCustom("Hey"))
 // console.log(fizzBuzzCustom("Hey", "Plop"))
-console.log(fizzBuzzCustom("Hey", "Plop", 5))
+// console.log(fizzBuzzCustom("Hey", "Plop", 5))
 // console.log(fizzBuzzCustom("What's", " up?", 42, 135))
 
 //fizzbuzz 1 - 100 (/5 or /3 or /3 and /5)
@@ -42,7 +42,7 @@ console.log(fizzBuzzCustom("Hey", "Plop", 5))
 // console.log(fizzBuzzCustom('Hey', 'There')[11]         
 // console.log(fizzBuzzCustom("What's ", "up?", 3, 7)[80] 
 
-const fizzBuzzCustom = (stringOne='Fizz', stringTwo='Buzz', numOne=3, numTwo=5) => {  
+const fizzBuzzCustom2 = (stringOne='Fizz', stringTwo='Buzz', numOne=3, numTwo=5) => {  
     return [...Array(101).keys()].map(i => {
       i = i + 1
       const fizz = !(i % numOne) ? stringOne : ''

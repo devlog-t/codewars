@@ -1,20 +1,14 @@
 function triangle(row) {
-    let cut = row.split('') //récupérer chaque lettre
-    let nextStep = []
-    for(let i = 0; i < cut.length; i++){
-        // console.log(cut[i])
-        if(cut[i] === cut[i+1]){
-            nextStep.push(cut[i])
+    let arr = row.split('')
 
-        }
-    }
-    console.log(nextStep)
     
+    
+    return arr
 }
 
-triangle('GB')
-// triangle('RRR')
-// triangle('RGBG')
-// triangle('RBRGBRB')
-// triangle('RBRGBRBGGRRRBGBBBGG')
-// triangle('B')
+console.log(triangle('GB'))
+console.log(triangle('RRR'))
+// console.log(triangle('RGBG'))
+console.log(triangle('RBRGBRB'))
+// console.log(triangle('RBRGBRBGGRRRBGBBBGG'))
+// console.log(triangle('B'))

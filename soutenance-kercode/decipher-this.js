@@ -2,11 +2,26 @@ function decipherThis(str) {
     
     let arr = str.split(' ')
     console.log(arr)
+
     arr.forEach(element => {
-        let charCode = element.match(/[0-9]/gi).join('')
-        // let letter = element.replace().match(/[a-z]/gi)
-        console.log(String.fromCharCode(charCode))
-        // console.log(letter)
+        // let charCode = element.match(/[0-9]/gi).join('')
+        // let charCode = element.replace(/[0-9]/gi, )
+        let charCode = element.replace(/[0-9]/gi, String.fromCharCode(element.match(/[0-9]/gi)))
+        
+        let letterArr = element.match(/[a-z]/gi)
+        
+        //Forecach element separate charcode translation and the rest of the word
+        //charcode = translate and return a string
+        // word = if != null cut in array and invert 1st and last letter else return the number, join and return a array of string
+
+        if(letterArr != null){
+            let letter = [letterArr.join('')]
+            console.log(letter)
+        }    
+
+        // console.log([String.fromCharCode(charCode)])
+        console.log(charCode)
+
         
     });
 }; 

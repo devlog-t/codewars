@@ -29,3 +29,12 @@ triangle('GB')
 // triangle('RBRGBRB')
 // triangle('RBRGBRBGGRRRBGBBBGG')
 // triangle('B')
+
+
+console.log(triangle('GB'))
+console.log(triangle('RRR'))
+// console.log(triangle('RGBG'))
+console.log(triangle('RBRGBRB'))
+// console.log(triangle('RBRGBRBGGRRRBGBBBGG'))
+// console.log(triangle('B'))
+>>>>>>> 56942374bc4066536836adb39c1fbe40b2bc7af9

@@ -1,8 +1,14 @@
-let rules = {R: ['BG', 'GB', 'RR'], B: ['RG', 'GR', 'BB'], G: ['BR', 'RB', 'GG']}
+
 
 // console.log(rules.R.includes('GB'))
 
 function triangle(row) {
+  let rules = {
+    R: ['BG', 'GB', 'RR'],
+    B: ['RG', 'GR', 'BB'],
+    G: ['BR', 'RB', 'GG']
+  }
+
   let arr = row.split('')
 
   while(arr.length != 1){
@@ -15,6 +21,7 @@ function triangle(row) {
       }
     }
   )
+  // console.log(arr)
   arr.splice(-1)
   }
   

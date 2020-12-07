@@ -17,8 +17,6 @@ function invert(array) {
  console.log(invert([]))
  console.log(invert([0]))
 
-
-
  //// SOLUTIONS ////
 function invert(array) {
    return array.map( x => x === 0 ? x : -x); 

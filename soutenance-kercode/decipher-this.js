@@ -1,35 +1,48 @@
 function decipherThis(str) {
-    
+    // let letter = {
+    //     97: 'a',
+    //     98: 'b',
+    //     99: 'c',
+    //     100: 'd',
+    //     101: 'e',
+    //     102: 'f',
+    //     103: 'g',
+    //     104: 'h',
+    //     105: 'i',
+    //     106: 'j',
+    //     107: 'k',
+    //     108: 'l',
+    //     109: 'm',
+    //     110: 'n',
+    //     111: 'o',
+    //     112: 'p',
+    //     113: 'q',
+    //     114: 'r',
+    //     115: 's',
+    //     116: 't',
+    //     117: 'u',
+    //     118: 'v',
+    //     119: 'w',
+    //     120: 'x',
+    //     121: 'y',
+    //     122: 'z',
+    // }
+
+
     let arr = str.split(' ')
-    console.log(arr)
 
-    arr.forEach(element => {
-        // let charCode = element.match(/[0-9]/gi).join('')
-        // let charCode = element.replace(/[0-9]/gi, )
-        let charCode = element.replace(/[0-9]/gi, String.fromCharCode(element.match(/[0-9]/gi)))
-        
-        let letterArr = element.match(/[a-z]/gi)
-        
-        //Forecach element separate charcode translation and the rest of the word
-        //charcode = translate and return a string
-        // word = if != null cut in array and invert 1st and last letter else return the number, join and return a array of string
+    for(let i = 0; i < arr.length; i++){
+        // console.log(arr[i])
+        let match = arr[i].match(/(\d+)/)
+        console.log(arr[i].charCodeAt(match[0]))
+    }
+    
+    //Récupérer valeur de match et la replace avec chart code
+    //Intervertir index 1 et dernier index avec variable transitoire
+    
 
-        if(letterArr != null){
-            let letter = [letterArr.join('')]
-            console.log(letter)
-        }    
-
-        // console.log([String.fromCharCode(charCode)])
-        console.log(charCode)
-
-        
-    });
+    return arr
+    
 }; 
 
-//replace foreach element of arr the match ref. in range 64 to ... with correspondance of charCode...
-//How to switch the second and last letter of each element of array ?
-//join original words with whitespace
-
-console.log(decipherThis('72eva 97 103o 97t 116sih 97dn 115ee 104wo 121uo 100o')) 
-//Have a go at this and see how you do
-
+console.log(decipherThis('72eva 97 103o 97t 116sih 97dn 115ee 104wo 121uo 100o'))

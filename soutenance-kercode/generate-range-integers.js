@@ -1,18 +1,16 @@
-function generateRange(min, max, step){
+// function generateRange(min, max, step){
 
-    let arr = [min]
+//     let arr = [min]
 
-    for(let i = 0; (arr[i]+step) <= max; i++){
+//     for(let i = 0; (arr[i]+step) <= max; i++){
         
-        arr.push(arr[i] + step)
-    }
+//         arr.push(arr[i] + step)
+//     }
     
-    return arr
-}
+//     return arr
+// }
 
-console.log(generateRange(2, 10, 2))
-console.log(generateRange(1, 10, 4))
-console.log(generateRange(1, 10, 5))
+
 
 ///SOLUTIONS///
 
@@ -27,3 +25,7 @@ function generateRange(min, max, step){
 //Tableau vide
 // boucle i = min tant que i < au max alors ajouter à i la valeur de step, i est incrémenter avant le push
 // push i
+
+console.log(generateRange(2, 10, 2))
+console.log(generateRange(1, 10, 4))
+console.log(generateRange(1, 10, 5))

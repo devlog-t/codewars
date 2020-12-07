@@ -237,11 +237,97 @@ const triangle = row => {
 
 ### Decipher This
 
+You are given a secret message you need to decipher. Here are the things you need to know to decipher it:
+
+For each word:
+
+- the second and the last letter is switched (e.g. `Hello` becomes `Holle`)
+- the first letter is replaced by its character code (e.g. `H` becomes `72`)
+
+```js
+function decipherThis(str) {
+    
+    let arr = str.split(' ')
+    let result = []
+
+    for(let i = 0; i < arr.length; i++){
+
+        //Récupérer les lettres uniquement
+        let matchLetter = arr[i].match(/[a-z]/g)
+        
+        // Chiffre seul = null
+        if(matchLetter){
+            let a = matchLetter[0]
+            let b = matchLetter[matchLetter.length - 1]
+            matchLetter[0] = b
+            matchLetter[matchLetter.length - 1] = a
+        } else {
+            matchLetter = [""]
+        }
+
+        // Récupérer les chiffres et les convertir en lettre
+        let matchNum = arr[i].match(/(\d+)/)
+        let translate = String.fromCharCode(parseInt(matchNum[0], 0))
+		
+        //Ajoute en premier la lettre
+        matchLetter.unshift(translate)
+        //Push le résutat join dans le tableau result
+        result.push(matchLetter.join(''))
+        
+           
+    }
+	//join with space 
+    return result.join(' ')
+    
+};
+```
+
+> - Split de la string fourni en argument pour pouvoir itérer dessus.
+>
+> - Isoler l'unicode pour traduction en lettre.
+>
+> - Isoler le texte existant pour inverser 1ère et dernière.
+>
+> - Assembler la traduction unicode et le reste du mot remis dans l'ordre.
+>
+> - Rassembler les mots pour former la valeur de retour attendu - la chaine passé en argument décoder/traduite.
 
 
 
+**CODEWARS SOLUTION**
 
-## Functions
+```javascript
+function decipherThis(str) {
+  return str.split(" ")
+    .map(w =>
+      w.replace(/^\d+/, c => String.fromCharCode(c))
+       .replace(/^(.)(.)(.*)(.)$/, "$1$4$3$2")
+    )
+    .join(" ")
+}
+```
+
+> - Split de la string
+> - map sur le tableau retourner avec argument fonction callback = w
+> - Sur w (element) remplace code (traduire regex) par la lettre correspondante
+> - puis remplace sur la chaine traduite (regex ?)
+> - join le tableau retourné par map
+
+
+
+------
+
+## Kuy 4
+
+### Roman Numerals Helper
+
+
+
+------
+
+
+
+## Fonctions
 
 
 
